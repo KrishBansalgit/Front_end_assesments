@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Trip - TravelHub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- =============== HEADER & NAVIGATION =============== -->
+  <header>
+    <div class="header-container container">
+      <div class="logo">
+        ✈️ TravelHub
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="travel-packages.html">Packages</a></li>
+          <li><a href="travel-blog.html">Blog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =============== PAGE HEADER =============== -->
+    <section class="hero">
+      <div class="container">
+        <h1>Book Your Dream Trip</h1>
+        <p>Complete the booking process and start your adventure</p>
+      </div>
+    </section>
+
+    <!-- =============== BOOKING FORM =============== -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2" style="gap: 3rem;">
+          <!-- FORM COLUMN -->
+          <div>
+            <h2>Trip Details</h2>
+            <form id="bookingForm">
+              <!-- Personal Information -->
+              <h3 style="margin-top: 2rem; border-bottom: 2px solid var(--primary-color); padding-bottom: 1rem;">Personal Information</h3>
+              
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required aria-label="First name">
+              </div>
+
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required aria-label="Last name">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required aria-label="Email address">
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required aria-label="Phone number">
+              </div>
+
+              <!-- Travel Details -->
+              <h3 style="margin-top: 2rem; border-bottom: 2px solid var(--primary-color); padding-bottom: 1rem;">Travel Details</h3>
+
+              <div class="form-group">
+                <label for="destination">Destination *</label>
+                <select id="destination" name="destination" required aria-label="Choose destination">
+                  <option value="">Select a destination</option>
+                  <option value="paris">Paris, France</option>
+                  <option value="tokyo">Tokyo, Japan</option>
+                  <option value="bali">Bali, Indonesia</option>
+                  <option value="bangkok">Bangkok, Thailand</option>
+                  <option value="maldives">Maldives</option>
+                  <option value="hawaii">Hawaii, USA</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="package">Travel Package *</label>
+                <select id="package" name="package" required aria-label="Choose package">
+                  <option value="">Select a package</option>
+                  <option value="european">European Grand Tour - $2,899</option>
+                  <option value="southeast">Southeast Asia Adventure - $1,299</option>
+                  <option value="caribbean">Caribbean Beach Retreat - $1,699</option>
+                  <option value="himalayan">Himalayan Trekking - $1,999</option>
+                  <option value="japan">Japan Luxury Experience - $3,499</option>
+                  <option value="usa">USA Family Road Trip - $1,599</option>
+                </select>
+              </div>
+
+              <div class="grid grid-2" style="gap: 1rem;">
+                <div class="form-group">
+                  <label for="startDate">Departure Date *</label>
+                  <input type="date" id="startDate" name="startDate" required aria-label="Departure date">
+                </div>
+
+                <div class="form-group">
+                  <label for="endDate">Return Date *</label>
+                  <input type="date" id="endDate" name="endDate" required aria-label="Return date">
+                </div>
+              </div>
+
+              <!-- Travelers -->
+              <h3 style="margin-top: 2rem; border-bottom: 2px solid var(--primary-color); padding-bottom: 1rem;">Number of Travelers</h3>
+
+              <div class="grid grid-2" style="gap: 1rem;">
+                <div class="form-group">
+                  <label for="adults">Adults (18+) *</label>
+                  <input type="number" id="adults" name="adults" min="1" value="1" required aria-label="Number of adults">
+                </div>
+
+                <div class="form-group">
+                  <label for="children">Children (2-17)</label>
+                  <input type="number" id="children" name="children" min="0" value="0" aria-label="Number of children">
+                </div>
+              </div>
+
+              <!-- Accommodation Preference -->
+              <h3 style="margin-top: 2rem; border-bottom: 2px solid var(--primary-color); padding-bottom: 1rem;">Accommodation Preference</h3>
+
+              <div class="form-group">
+                <label for="accommodation">Room Type *</label>
+                <select id="accommodation" name="accommodation" required aria-label="Choose room type">
+                  <option value="">Select room type</option>
+                  <option value="single">Single Room</option>
+                  <option value="double">Double Room</option>
+                  <option value="family">Family Suite</option>
+                  <option value="deluxe">Deluxe</option>
+                  <option value="suite">Suite</option>
+                </select>
+              </div>
+
+              <!-- Special Requests -->
+              <h3 style="margin-top: 2rem; border-bottom: 2px solid var(--primary-color); padding-bottom: 1rem;">Special Requests</h3>
+
+              <div class="form-group">
+                <label for="specialRequests">Any Special Requests or Dietary Requirements?</label>
+                <textarea id="specialRequests" name="specialRequests" placeholder="E.g., vegetarian meals, wheelchair access, etc." aria-label="Special requests"></textarea>
+              </div>
+
+              <!-- Terms & Conditions -->
+              <div class="form-group">
+                <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                  <input type="checkbox" id="terms" name="terms" required style="width: auto; min-width: 18px;">
+                  <span>I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a> *</span>
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                  <input type="checkbox" id="newsletter" name="newsletter" style="width: auto; min-width: 18px;">
+                  <span>Subscribe to our newsletter for travel tips and exclusive offers</span>
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-full" style="margin-top: 2rem; font-size: 1.1rem; padding: 1rem;">
+                Complete Booking
+              </button>
+            </form>
+          </div>
+
+          <!-- SUMMARY COLUMN -->
+          <div>
+            <div style="background-color: var(--bg-light); padding: 2rem; border-radius: 8px; position: sticky; top: 100px;">
+              <h2>Booking Summary</h2>
+
+              <div style="margin-top: 2rem; padding: 1rem; background-color: white; border-radius: 4px; border-left: 4px solid var(--primary-color);">
+                <h3 style="margin-bottom: 1rem;">Selected Package Details</h3>
+                
+                <div style="margin-bottom: 1rem;">
+                  <p><strong>Destination:</strong> <span id="summaryDest">Not selected</span></p>
+                  <p><strong>Package:</strong> <span id="summaryPackage">Not selected</span></p>
+                </div>
+
+                <hr style="margin: 1rem 0; border: none; border-top: 1px solid var(--border-color);">
+
+                <div style="margin-bottom: 1rem;">
+                  <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <span>Package Price:</span>
+                    <span id="pricePackage">$0</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <span>Travelers (×1):</span>
+                    <span id="priceTraveler">$0</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <span>Insurance:</span>
+                    <span id="priceInsurance">$99</span>
+                  </div>
+                </div>
+
+                <hr style="margin: 1rem 0; border: none; border-top: 2px solid var(--primary-color);">
+
+                <div style="display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: bold; color: var(--primary-color);">
+                  <span>Total Cost:</span>
+                  <span id="totalPrice">$99</span>
+                </div>
+              </div>
+
+              <!-- Important Info Box -->
+              <div style="margin-top: 2rem; padding: 1.5rem; background-color: rgb(52, 152, 219); color: white; border-radius: 4px;">
+                <h4 style="color: white; margin-bottom: 1rem;">ℹ️ Important Information</h4>
+                <ul style="padding-left: 1.5rem; line-height: 1.8;">
+                  <li>Full payment due within 48 hours</li>
+                  <li>Free cancellation up to 14 days</li>
+                  <li>Travel insurance is optional</li>
+                  <li>Confirmation sent via email</li>
+                </ul>
+              </div>
+
+              <!-- Customer Support -->
+              <div style="margin-top: 2rem; padding: 1rem; background-color: var(--bg-light); border-radius: 4px; text-align: center;">
+                <p style="margin: 0;">Need help? Contact our team</p>
+                <p style="margin: 0.5rem 0 0;">📞 +1 (800) 123-4567</p>
+                <p style="margin: 0.5rem 0 0;">📧 booking@travelhub.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== TRUST BADGES =============== -->
+    <section class="section" style="background-color: var(--bg-light);">
+      <div class="container">
+        <h2 class="text-center mb-2">Why Book with Confidence</h2>
+        <div class="grid grid-3">
+          <div class="text-center">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+            <h3>Secure Payment</h3>
+            <p>SSL encrypted transactions protect your personal and payment information.</p>
+          </div>
+          <div class="text-center">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">✈️</div>
+            <h3>IATA Certified</h3>
+            <p>We are certified by the International Air Transport Association.</p>
+          </div>
+          <div class="text-center">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">👥</div>
+            <h3>100,000+ Happy Customers</h3>
+            <p>Join thousands of travelers who have booked with TravelHub.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== FOOTER =============== -->
+  <footer>
+    <div class="container">
+      <div class="footer-section">
+        <h3>About TravelHub</h3>
+        <p>Your trusted companion for discovering and booking unforgettable travel experiences.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="travel-packages.html">Packages</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>📧 info@travelhub.com<br>📞 +1 (800) 123-4567</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#">f</a>
+          <a href="#">𝕏</a>
+          <a href="#">📷</a>
+          <a href="#">▶</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TravelHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Update booking summary
+    const packagePrices = {
+      'european': 2899,
+      'southeast': 1299,
+      'caribbean': 1699,
+      'himalayan': 1999,
+      'japan': 3499,
+      'usa': 1599
+    };
+
+    const destinations = {
+      'paris': 'Paris, France',
+      'tokyo': 'Tokyo, Japan',
+      'bali': 'Bali, Indonesia',
+      'bangkok': 'Bangkok, Thailand',
+      'maldives': 'Maldives',
+      'hawaii': 'Hawaii, USA'
+    };
+
+    function updateSummary() {
+      const dest = document.getElementById('destination').value;
+      const pkg = document.getElementById('package').value;
+      const adults = parseInt(document.getElementById('adults').value) || 1;
+
+      document.getElementById('summaryDest').textContent = destinations[dest] || 'Not selected';
+      
+      const packageDisplay = document.getElementById('package').options[document.getElementById('package').selectedIndex].text;
+      document.getElementById('summaryPackage').textContent = packageDisplay || 'Not selected';
+
+      const basePrice = packagePrices[pkg] || 0;
+      const totalPackage = basePrice * adults;
+      const insurance = 99;
+
+      document.getElementById('pricePackage').textContent = '$' + basePrice.toLocaleString();
+      document.getElementById('priceTraveler').textContent = '$' + totalPackage.toLocaleString();
+      document.getElementById('totalPrice').textContent = '$' + (totalPackage + insurance).toLocaleString();
+    }
+
+    document.getElementById('destination').addEventListener('change', updateSummary);
+    document.getElementById('package').addEventListener('change', updateSummary);
+    document.getElementById('adults').addEventListener('change', updateSummary);
+
+    updateSummary();
+  </script>
+</body>
+</html>

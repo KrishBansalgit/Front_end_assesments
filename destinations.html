@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations - TravelHub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- =============== HEADER & NAVIGATION =============== -->
+  <header>
+    <div class="header-container container">
+      <div class="logo">
+        ✈️ TravelHub
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="travel-packages.html">Packages</a></li>
+          <li><a href="travel-blog.html">Blog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =============== PAGE HEADER =============== -->
+    <section class="hero">
+      <div class="container">
+        <h1>Explore Our Destinations</h1>
+        <p>Choose from hundreds of amazing places to visit around the world</p>
+      </div>
+    </section>
+
+    <!-- =============== FILTER SECTION =============== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Filter Destinations</h2>
+        </div>
+
+        <div class="flex" style="justify-content: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="filterDestinations('all')">All</button>
+          <button class="btn btn-outline" onclick="filterDestinations('beach')">🏖️ Beach</button>
+          <button class="btn btn-outline" onclick="filterDestinations('mountain')">⛰️ Mountain</button>
+          <button class="btn btn-outline" onclick="filterDestinations('cultural')">🏛️ Cultural</button>
+          <button class="btn btn-outline" onclick="filterDestinations('adventure')">🏔️ Adventure</button>
+        </div>
+
+        <!-- =============== DESTINATIONS GRID =============== -->
+        <div class="grid grid-3">
+          <!-- Beach Destinations -->
+          <article class="card" data-category="beach">
+            <img src="images/jack-anstey-XVoyX7l9ocY-unsplash.jpg" alt="Bali beach resort" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Bali, Indonesia</h3>
+              <div class="rating">
+                <span class="star">★★★★☆</span>
+                <span class="rating-value">(4,782)</span>
+              </div>
+              <p class="card-text">Pristine beaches, lush rice terraces, ancient temples, and world-class resorts await you.</p>
+              <div class="card-meta">
+                <span>🌡️ 28°C</span>
+                <span>💰 $80/day</span>
+              </div>
+              <div class="flex-between">
+                <span class="badge">Beach</span>
+                <a href="destination-details.html?dest=bali" class="btn btn-primary btn-sm">Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="beach">
+            <img src="images/rana-sawalha-W_-6PWGbYaU-unsplash.jpg" alt="Maldives islands" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Maldives</h3>
+              <div class="rating">
+                <span class="star">★★★★★</span>
+                <span class="rating-value">(3,256)</span>
+              </div>
+              <p class="card-text">Luxurious overwater bungalows, crystal-clear waters, and untouched coral reefs.</p>
+              <div class="card-meta">
+                <span>🌡️ 30°C</span>
+                <span>💰 $200/day</span>
+              </div>
+              <div class="flex-between">
+                <span class="badge">Beach</span>
+                <a href="destination-details.html?dest=maldives" class="btn btn-primary btn-sm">Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="beach">
+            <img src="images/eva-darron-oCdVtGFeDC0-unsplash.jpg" alt="Hawaii volcanic landscape" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Hawaii, USA</h3>
+              <div class="rating">
+                <span class="star">★★★★★</span>
+                <span class="rating-value">(5,123)</span>
+              </div>
+              <p class="card-text">Island paradise with volcanic landscapes, waterfalls, and world-famous beaches.</p>
+              <div class="card-meta">
+                <span>🌡️ 26°C</span>
+                <span>💰 $150/day</span>
+              </div>
+              <div class="flex-between">
+                <span class="badge">Beach</span>
+                <a href="destination-details.html?dest=hawaii" class="btn btn-primary btn-sm">Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mountain Destinations -->
+          <article class="card" data-category="mountain">
+            <img src="images/dino-reichmuth-A5rCN8626Ck-unsplash.jpg" alt="Swiss Alps mountain range" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Swiss Alps, Switzerland</h3>
+              <div class="rating">
+                <span class="star">★★★★★</span>
+                <span class="rating-value">(2,847)</span>
+              </div>
+              <p class="card-text">Stunning alpine landscapes, picturesque villages, and year-round outdoor activities.</p>
+              <div class="card-meta">
+                <span>🌡️ 5°C</span>
+                <span>💰 $120/day</span>
+              </div>
+              <div class="flex-between">
+                <span class="badge">Mountain</span>
+                <a href="destination-details.html?dest=swiss-alps" class="btn btn-primary btn-sm">Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="mountain">
+            <img src="images/robin-noguier-sydwCr54rf0-unsplash.jpg" alt="Mount Everest" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Himalayas, Nepal</h3>
+              <div class="rating">
+                <span class="star">★★★★★</span>
+                <span class="rating-value">(3,456)</span>
+              </div>
+              <p class="card-text">Experience the world's highest peaks and trek through breathtaking mountain scenery.</p>
+              <div class="card-meta">
+                <span>🌡️ 10°C</span>
+                <span>💰 $30/day</span>
+              </div>
+              <div class="flex-between">
+                <span class="badge">Mountain</span>
+                <a href="destination-details.html?dest=everest" class="btn btn-primary btn-sm">Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="mountain">
+            <img src="images/william-bayreuther-C0KdBbibUYo-unsplash.jpg" alt="Canadian Rocky Mountains" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Banff, Canada</h3>
+              <div class="rating">
+                <span class="star">★★★★☆</span>
+                <span class="rating-value">(2,634)</span>
+              </div>
+              <p class="card-text">Majestic mountain peaks, turquoise lakes, and pristine wilderness of the Canadian Rockies.</p>
+              <div class="card-meta">
+                <span>🌡️ 8°C</span>
+                <span>💰 $100/day</span>
+              </div>
+              <div class="flex-between">
+                <span class="badge">Mountain</span>
+                <a href="destination-details.html?dest=banff" class="btn btn-primary btn-sm">Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cultural Destinations -->
+          <article class="card" data-category="cultural">
+            <img src="images/priscilla-du-preez-EFoH8YajQuA-unsplash.jpg" alt="Eiffel Tower Paris" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Paris, France</h3>
+              <div class="rating">
+                <span class="star">★★★★★</span>
+                <span class="rating-value">(2,456)</span>
+              </div>
+              <p class="card-text">The city of light featuring world-class museums, historic monuments, and fine dining.</p>
+              <div class="card-meta">
+                <span>🌡️ 15°C</span>
+                <span>💰 $110/day</span>
+              </div>
+              <div class="flex-between">
+                <span class="badge">Cultural</span>
+                <a href="destination-details.html?dest=paris" class="btn btn-primary btn-sm">Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="cultural">
+            <img src="images/gaddafi-rusli-2ueUnL4CkV8-unsplash.jpg" alt="Colosseum Rome" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Rome, Italy</h3>
+              <div class="rating">
+                <span class="star">★★★★★</span>
+                <span class="rating-value">(4,123)</span>
+              </div>
+              <p class="card-text">Ancient ruins, Renaissance art, and delicious Italian cuisine in the eternal city.</p>
+              <div class="card-meta">
+                <span>🌡️ 18°C</span>
+                <span>💰 $90/day</span>
+              </div>
+              <div class="flex-between">
+                <span class="badge">Cultural</span>
+                <a href="destination-details.html?dest=rome" class="btn btn-primary btn-sm">Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="cultural">
+            <img src="images/shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg" alt="Tokyo cityscape" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Tokyo, Japan</h3>
+              <div class="rating">
+                <span class="star">★★★★★</span>
+                <span class="rating-value">(3,128)</span>
+              </div>
+              <p class="card-text">Blend of ancient tradition and cutting-edge technology in vibrant modern Japan.</p>
+              <div class="card-meta">
+                <span>🌡️ 20°C</span>
+                <span>💰 $130/day</span>
+              </div>
+              <div class="flex-between">
+                <span class="badge">Cultural</span>
+                <a href="destination-details.html?dest=tokyo" class="btn btn-primary btn-sm">Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Adventure Destinations -->
+          <article class="card" data-category="adventure">
+            <img src="images/cyril-mzn-WSvth_lwCi0-unsplash.jpg" alt="Iceland waterfalls" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Iceland</h3>
+              <div class="rating">
+                <span class="star">★★★★★</span>
+                <span class="rating-value">(2,789)</span>
+              </div>
+              <p class="card-text">Waterfalls, geysers, glaciers, and the magical Northern Lights await adventurers.</p>
+              <div class="card-meta">
+                <span>🌡️ 5°C</span>
+                <span>💰 $140/day</span>
+              </div>
+              <div class="flex-between">
+                <span class="badge">Adventure</span>
+                <a href="destination-details.html?dest=iceland" class="btn btn-primary btn-sm">Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="adventure">
+            <img src="images/damiano-baschiera-hFXZ5cNfkOk-unsplash.jpg" alt="Patagonia landscapes" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Patagonia, Argentina</h3>
+              <div class="rating">
+                <span class="star">★★★★☆</span>
+                <span class="rating-value">(1,923)</span>
+              </div>
+              <p class="card-text">Dramatic mountains, glaciers, and wilderness perfect for hiking and exploring.</p>
+              <div class="card-meta">
+                <span>🌡️ 12°C</span>
+                <span>💰 $70/day</span>
+              </div>
+              <div class="flex-between">
+                <span class="badge">Adventure</span>
+                <a href="destination-details.html?dest=patagonia" class="btn btn-primary btn-sm">Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="adventure">
+            <img src="images/jack-ward-rknrvCrfS1k-unsplash.jpg" alt="Mount Kilimanjaro" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Mount Kilimanjaro, Tanzania</h3>
+              <div class="rating">
+                <span class="star">★★★★★</span>
+                <span class="rating-value">(1,654)</span>
+              </div>
+              <p class="card-text">Climb Africa's highest peak and witness incredible views of the surrounding plains.</p>
+              <div class="card-meta">
+                <span>🌡️ 15°C</span>
+                <span>💰 $1,500-2,500</span>
+              </div>
+              <div class="flex-between">
+                <span class="badge">Adventure</span>
+                <a href="destination-details.html?dest=kili" class="btn btn-primary btn-sm">Details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <button>← Previous</button>
+          <a class="active">1</a>
+          <a>2</a>
+          <a>3</a>
+          <button>Next →</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== FOOTER =============== -->
+  <footer>
+    <div class="container">
+      <div class="footer-section">
+        <h3>About TravelHub</h3>
+        <p>Your trusted companion for discovering and booking unforgettable travel experiences.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="travel-packages.html">Packages</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>📧 info@travelhub.com<br>📞 +1 (800) 123-4567</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#">f</a>
+          <a href="#">𝕏</a>
+          <a href="#">📷</a>
+          <a href="#">▶</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TravelHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function filterDestinations(category) {
+      const cards = document.querySelectorAll('[data-category]');
+      const buttons = document.querySelectorAll('.flex button');
+      
+      buttons.forEach(btn => btn.classList.remove('btn-primary'));
+      buttons.forEach(btn => btn.classList.add('btn-outline'));
+      event.target.classList.remove('btn-outline');
+      event.target.classList.add('btn-primary');
+      
+      if (category === 'all') {
+        cards.forEach(card => card.style.display = '');
+      } else {
+        cards.forEach(card => {
+          card.style.display = card.dataset.category === category ? '' : 'none';
+        });
+      }
+    }
+  </script>
+</body>
+</html>

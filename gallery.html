@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - TravelHub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- =============== HEADER & NAVIGATION =============== -->
+  <header>
+    <div class="header-container container">
+      <div class="logo">
+        ✈️ TravelHub
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="travel-packages.html">Packages</a></li>
+          <li><a href="travel-blog.html">Blog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =============== PAGE HEADER =============== -->
+    <section class="hero">
+      <div class="container">
+        <h1>Travel Gallery</h1>
+        <p>Stunning moments from around the world captured by our travelers</p>
+      </div>
+    </section>
+
+    <!-- =============== GALLERY FILTERS =============== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-2">Browse Our Gallery</h2>
+        
+        <div class="flex" style="justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="filterGallery('all')">All</button>
+          <button class="btn btn-outline" onclick="filterGallery('beaches')">🏖️ Beaches</button>
+          <button class="btn btn-outline" onclick="filterGallery('mountains')">⛰️ Mountains</button>
+          <button class="btn btn-outline" onclick="filterGallery('culture')">🏛️ Culture</button>
+          <button class="btn btn-outline" onclick="filterGallery('wildlife')">🦁 Wildlife</button>
+          <button class="btn btn-outline" onclick="filterGallery('food')">🍜 Food</button>
+        </div>
+
+        <!-- =============== GALLERY GRID =============== -->
+        <div class="grid grid-3">
+          <!-- Beach Photos -->
+          <div class="gallery-item" data-category="beaches" style="cursor: pointer; overflow: hidden; border-radius: 8px;">
+            <img src="images/rana-sawalha-W_-6PWGbYaU-unsplash.jpg" alt="Tropical beach sunset" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+            <div style="padding: 1rem; background-color: var(--bg-light);">
+              <h4>Tropical Beach Paradise</h4>
+              <p style="font-size: 0.875rem; color: var(--text-light);">Maldives • Photo by @travelgram</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="beaches" style="cursor: pointer; overflow: hidden; border-radius: 8px;">
+            <img src="images/eva-darron-oCdVtGFeDC0-unsplash.jpg" alt="Sunset beach view" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+            <div style="padding: 1rem; background-color: var(--bg-light);">
+              <h4>Golden Hour Beach</h4>
+              <p style="font-size: 0.875rem; color: var(--text-light);">Bali • Photo by @wanderlust_daily</p>
+            </div>
+          </div>
+
+          <!-- Mountain Photos -->
+          <div class="gallery-item" data-category="mountains" style="cursor: pointer; overflow: hidden; border-radius: 8px;">
+            <img src="images/dino-reichmuth-A5rCN8626Ck-unsplash.jpg" alt="Snow covered mountain peaks" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+            <div style="padding: 1rem; background-color: var(--bg-light);">
+              <h4>Alpine Peaks</h4>
+              <p style="font-size: 0.875rem; color: var(--text-light);">Swiss Alps • Photo by @mountain_explorer</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="mountains" style="cursor: pointer; overflow: hidden; border-radius: 8px;">
+            <img src="images/william-bayreuther-C0KdBbibUYo-unsplash.jpg" alt="Mountain landscape" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+            <div style="padding: 1rem; background-color: var(--bg-light);">
+              <h4>Mountain Summit</h4>
+              <p style="font-size: 0.875rem; color: var(--text-light);">Himalayas • Photo by @peak_chaser</p>
+            </div>
+          </div>
+
+          <!-- City Photos -->
+          <div class="gallery-item" data-category="culture" style="cursor: pointer; overflow: hidden; border-radius: 8px;">
+            <img src="images/shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg" alt="City lights at night" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+            <div style="padding: 1rem; background-color: var(--bg-light);">
+              <h4>Urban Night Life</h4>
+              <p style="font-size: 0.875rem; color: var(--text-light);">Tokyo • Photo by @city_lights</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="culture" style="cursor: pointer; overflow: hidden; border-radius: 8px;">
+            <img src="images/gaddafi-rusli-2ueUnL4CkV8-unsplash.jpg" alt="Historic city streets" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+            <div style="padding: 1rem; background-color: var(--bg-light);">
+              <h4>Historic Streets</h4>
+              <p style="font-size: 0.875rem; color: var(--text-light);">Rome • Photo by @urban_explorer</p>
+            </div>
+          </div>
+
+          <!-- Forest Photos -->
+          <div class="gallery-item" data-category="wildlife" style="cursor: pointer; overflow: hidden; border-radius: 8px;">
+            <img src="images/christoph-schulz-7tb-b37yHx4-unsplash.jpg" alt="Dense green forest" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+            <div style="padding: 1rem; background-color: var(--bg-light);">
+              <h4>Rainforest Adventure</h4>
+              <p style="font-size: 0.875rem; color: var(--text-light);">Amazon • Photo by @nature_calls</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="wildlife" style="cursor: pointer; overflow: hidden; border-radius: 8px;">
+            <img src="images/cyril-mzn-WSvth_lwCi0-unsplash.jpg" alt="Wildlife sanctuary" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+            <div style="padding: 1rem; background-color: var(--bg-light);">
+              <h4>Wildlife Encounter</h4>
+              <p style="font-size: 0.875rem; color: var(--text-light);">Kenya • Photo by @safari_tales</p>
+            </div>
+          </div>
+
+          <!-- Food Photos -->
+          <div class="gallery-item" data-category="food" style="cursor: pointer; overflow: hidden; border-radius: 8px;">
+            <img src="images/felix-rostig-UmV2wr-Vbq8-unsplash.jpg" alt="Local street food" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+            <div style="padding: 1rem; background-color: var(--bg-light);">
+              <h4>Street Food Delights</h4>
+              <p style="font-size: 0.875rem; color: var(--text-light);">Thailand • Photo by @foodie_travels</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="food" style="cursor: pointer; overflow: hidden; border-radius: 8px;">
+            <img src="images/sebastian-leon-prado-MgODFmLOaEY-unsplash.jpg" alt="Traditional cuisine" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+            <div style="padding: 1rem; background-color: var(--bg-light);">
+              <h4>culinary Journey</h4>
+              <p style="font-size: 0.875rem; color: var(--text-light);">Italy • Photo by @taste_travels</p>
+            </div>
+          </div>
+
+          <!-- More Photos -->
+          <div class="gallery-item" data-category="culture" style="cursor: pointer; overflow: hidden; border-radius: 8px;">
+            <img src="images/priscilla-du-preez-EFoH8YajQuA-unsplash.jpg" alt="Cultural landmarks" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+            <div style="padding: 1rem; background-color: var(--bg-light);">
+              <h4>Cultural Heritage</h4>
+              <p style="font-size: 0.875rem; color: var(--text-light);">Egypt • Photo by @heritage_explorer</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="beaches" style="cursor: pointer; overflow: hidden; border-radius: 8px;">
+            <img src="images/destinations/bali.jpg" alt="Island hopping" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+            <div style="padding: 1rem; background-color: var(--bg-light);">
+              <h4>Island Hopping</h4>
+              <p style="font-size: 0.875rem; color: var(--text-light);">Polynesia • Photo by @island_adventure</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="mountains" style="cursor: pointer; overflow: hidden; border-radius: 8px;">
+            <img src="images/destinations/everest.jpg" alt="Adventure sports" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+            <div style="padding: 1rem; background-color: var(--bg-light);">
+              <h4>Adventure Sports</h4>
+              <p style="font-size: 0.875rem; color: var(--text-light);">Nepal • Photo by @adrenaline_junkie</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== SHARE YOUR PHOTOS =============== -->
+    <section class="section" style="background-color: var(--bg-light);">
+      <div class="container text-center">
+        <h2>Share Your Travel Moments</h2>
+        <p>Have amazing travel photos? Share them with our community and get featured!</p>
+        <button class="btn btn-primary" onclick="alert('Coming soon! Email your photos to gallery@travelhub.com with #TravelHub')">Submit Your Photos</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== FOOTER =============== -->
+  <footer>
+    <div class="container">
+      <div class="footer-section">
+        <h3>About TravelHub</h3>
+        <p>Your trusted companion for discovering and booking unforgettable travel experiences.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="travel-packages.html">Packages</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>📧 info@travelhub.com<br>📞 +1 (800) 123-4567</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#">f</a>
+          <a href="#">𝕏</a>
+          <a href="#">📷</a>
+          <a href="#">▶</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TravelHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function filterGallery(category) {
+      const items = document.querySelectorAll('[data-category]');
+      const buttons = document.querySelectorAll('.flex button');
+      
+      buttons.forEach(btn => btn.classList.remove('btn-primary'));
+      buttons.forEach(btn => btn.classList.add('btn-outline'));
+      event.target.classList.remove('btn-outline');
+      event.target.classList.add('btn-primary');
+      
+      if (category === 'all') {
+        items.forEach(item => item.style.display = '');
+      } else {
+        items.forEach(item => {
+          item.style.display = item.dataset.category === category ? '' : 'none';
+        });
+      }
+    }
+
+    // Add hover effect
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.05)';
+      });
+      img.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+      });
+    });
+  </script>
+</body>
+</html>

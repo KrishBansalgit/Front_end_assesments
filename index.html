@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelHub - Your Ultimate Travel Guide</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- =============== HEADER & NAVIGATION =============== -->
+  <header>
+    <div class="header-container container">
+      <div class="logo">
+        ✈️ TravelHub
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="travel-packages.html">Packages</a></li>
+          <li><a href="travel-blog.html">Blog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =============== HERO SECTION =============== -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Explore the World with TravelHub</h1>
+        <p>Discover amazing destinations, create unforgettable memories, and experience the journey of a lifetime.</p>
+        <button class="btn btn-secondary" onclick="window.location.href='destinations.html'">Explore Destinations</button>
+      </div>
+    </section>
+
+    <!-- =============== FEATURED DESTINATIONS =============== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Destinations</h2>
+          <p>Handpicked locations for your next adventure</p>
+        </div>
+        
+        <div class="grid grid-3">
+          <article class="card">
+            <img src="images/priscilla-du-preez-EFoH8YajQuA-unsplash.jpg" alt="Eiffel Tower in Paris" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Paris, France</h3>
+              <div class="rating">
+                <span class="star">★★★★★</span>
+                <span class="rating-value">(2,456 reviews)</span>
+              </div>
+              <p class="card-text">Experience the city of love with world-class museums, romantic cafés, and the iconic Eiffel Tower.</p>
+              <div class="flex-between">
+                <span class="badge">Cultural</span>
+                <a href="destination-details.html?dest=paris" class="btn btn-primary btn-sm">Learn More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg" alt="Tokyo skyline at night" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Tokyo, Japan</h3>
+              <div class="rating">
+                <span class="star">★★★★★</span>
+                <span class="rating-value">(3,128 reviews)</span>
+              </div>
+              <p class="card-text">Blend of ancient tradition and cutting-edge technology in the vibrant capital of Japan.</p>
+              <div class="flex-between">
+                <span class="badge">Modern</span>
+                <a href="destination-details.html?dest=tokyo" class="btn btn-primary btn-sm">Learn More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/jack-anstey-XVoyX7l9ocY-unsplash.jpg" alt="Tropical beaches of Bali" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Bali, Indonesia</h3>
+              <div class="rating">
+                <span class="star">★★★★☆</span>
+                <span class="rating-value">(4,782 reviews)</span>
+              </div>
+              <p class="card-text">Pristine beaches, lush rice terraces, and ancient temples in this tropical paradise.</p>
+              <div class="flex-between">
+                <span class="badge">Beach</span>
+                <a href="destination-details.html?dest=bali" class="btn btn-primary btn-sm">Learn More</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== IMAGE SLIDER =============== -->
+    <section class="section" style="background-color: var(--bg-light);">
+      <div class="container">
+        <h2 class="text-center mb-2">Travel Moments</h2>
+        <div class="slider-container">
+          <div class="slider-wrapper">
+            <div class="slider-item">
+              <img src="images/rana-sawalha-W_-6PWGbYaU-unsplash.jpg" alt="Beautiful sunset at the beach">
+            </div>
+            <div class="slider-item">
+              <img src="images/dino-reichmuth-A5rCN8626Ck-unsplash.jpg" alt="Snow-capped mountains">
+            </div>
+            <div class="slider-item">
+              <img src="images/christoph-schulz-7tb-b37yHx4-unsplash.jpg" alt="City lights at night">
+            </div>
+            <div class="slider-item">
+              <img src="images/cyril-mzn-WSvth_lwCi0-unsplash.jpg" alt="Dense green forest">
+            </div>
+          </div>
+          <button class="slider-prev" aria-label="Previous slide">❮</button>
+          <button class="slider-next" aria-label="Next slide">❯</button>
+          <div class="slider-nav">
+            <div class="slider-dot active"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== POPULAR PACKAGES =============== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Popular Travel Packages</h2>
+          <p>All-inclusive deals for every budget</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-content">
+              <span class="badge badge-success">Popular</span>
+              <h3 class="card-title">European Tour</h3>
+              <p class="card-text">Visit 5 countries in 12 days with guided tours and 4-star accommodations.</p>
+              <div class="card-meta">
+                <span>⏱️ 12 Days</span>
+                <span>👥 Group Tour</span>
+              </div>
+              <div class="flex-between">
+                <span style="font-size: 1.5rem; font-weight: bold; color: var(--primary-color);">$2,499</span>
+                <a href="travel-packages.html" class="btn btn-primary btn-sm">View</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-content">
+              <span class="badge">Most Affordable</span>
+              <h3 class="card-title">Beach Escape</h3>
+              <p class="card-text">Relax in tropical paradise with beachfront resort and daily breakfast included.</p>
+              <div class="card-meta">
+                <span>⏱️ 7 Days</span>
+                <span>👥 Families</span>
+              </div>
+              <div class="flex-between">
+                <span style="font-size: 1.5rem; font-weight: bold; color: var(--primary-color);">$999</span>
+                <a href="travel-packages.html" class="btn btn-primary btn-sm">View</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-content">
+              <span class="badge badge-warning">Limited</span>
+              <h3 class="card-title">Adventure Quest</h3>
+              <p class="card-text">Trekking, rock climbing, and water sports in stunning natural landscapes.</p>
+              <div class="card-meta">
+                <span>⏱️ 10 Days</span>
+                <span>👥 Adventure</span>
+              </div>
+              <div class="flex-between">
+                <span style="font-size: 1.5rem; font-weight: bold; color: var(--primary-color);">$1,799</span>
+                <a href="travel-packages.html" class="btn btn-primary btn-sm">View</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== WHY CHOOSE US =============== -->
+    <section class="section" style="background-color: var(--bg-light);">
+      <div class="container">
+        <div class="section-title">
+          <h2>Why Choose TravelHub?</h2>
+        </div>
+
+        <div class="grid grid-2">
+          <div>
+            <h3>✈️ Expert Itineraries</h3>
+            <p>Carefully curated travel plans designed by experienced travel consultants to maximize your experience.</p>
+          </div>
+          <div>
+            <h3>💰 Best Price Guarantee</h3>
+            <p>We guarantee the lowest prices on travel packages. If you find a better deal, we'll match it!</p>
+          </div>
+          <div>
+            <h3>🛡️ Travel Insurance</h3>
+            <p>Comprehensive travel insurance options to protect your investment and give you peace of mind.</p>
+          </div>
+          <div>
+            <h3>🤝 24/7 Support</h3>
+            <p>Our dedicated travel experts are available round-the-clock to assist you with any queries or concerns.</p>
+          </div>
+          <div>
+            <h3>🌍 Wide Selection</h3>
+            <p>Access to thousands of destinations and experiences around the globe curated just for you.</p>
+          </div>
+          <div>
+            <h3>📱 Easy Booking</h3>
+            <p>Simple and secure online booking platform with flexible payment options and instant confirmation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== LATEST BLOG POSTS =============== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Travel Tips & Stories</h2>
+          <p>Insights and inspiration for your next journey</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <img src="images/sebastian-leon-prado-MgODFmLOaEY-unsplash.jpg" alt="Travel packing tips" class="card-image">
+            <div class="card-content">
+              <span class="badge">Tips</span>
+              <h3 class="card-title">Smart Packing Guide</h3>
+              <p class="card-text">Learn how to pack smart and travel light without sacrificing comfort on your journey.</p>
+              <div class="card-meta">
+                <span>📅 15 Feb 2026</span>
+                <span>⏱️ 5 min read</span>
+              </div>
+              <a href="travel-blog.html#packing" class="btn btn-outline">Read More</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/felix-rostig-UmV2wr-Vbq8-unsplash.jpg" alt="Budget travel tips" class="card-image">
+            <div class="card-content">
+              <span class="badge">Budget</span>
+              <h3 class="card-title">Travel on a Budget</h3>
+              <p class="card-text">Discover secret tips to travel the world without breaking the bank and living like a local.</p>
+              <div class="card-meta">
+                <span>📅 12 Feb 2026</span>
+                <span>⏱️ 7 min read</span>
+              </div>
+              <a href="travel-blog.html#budget" class="btn btn-outline">Read More</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/timo-stern-iUBgeNeyVy8-unsplash.jpg" alt="Travel safety tips" class="card-image">
+            <div class="card-content">
+              <span class="badge">Safety</span>
+              <h3 class="card-title">Stay Safe While Traveling</h3>
+              <p class="card-text">Essential safety tips and precautions to ensure a secure and worry-free travel experience.</p>
+              <div class="card-meta">
+                <span>📅 10 Feb 2026</span>
+                <span>⏱️ 6 min read</span>
+              </div>
+              <a href="travel-blog.html#safety" class="btn btn-outline">Read More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== CTA SECTION =============== -->
+    <section class="section" style="background: linear-gradient(135deg, var(--primary-color) 0%, #1e3f5a 100%); color: white;">
+      <div class="container text-center">
+        <h2 style="color: white;">Ready to Start Your Adventure?</h2>
+        <p>Book your dream vacation today and create memories that last a lifetime.</p>
+        <button class="btn btn-secondary" onclick="window.location.href='booking.html'">Book Now</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== FOOTER =============== -->
+  <footer>
+    <div class="container">
+      <div class="footer-section">
+        <h3>About TravelHub</h3>
+        <p>Your trusted companion for discovering and booking unforgettable travel experiences around the world.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="travel-packages.html">Packages</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>📧 Email: info@travelhub.com<br>
+           📞 Phone: +1 (800) 123-4567<br>
+           📍 Address: 123 Travel Street, NYC 10001</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 TravelHub. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - TravelHub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- =============== HEADER & NAVIGATION =============== -->
+  <header>
+    <div class="header-container container">
+      <div class="logo">
+        ✈️ TravelHub
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="travel-packages.html">Packages</a></li>
+          <li><a href="travel-blog.html">Blog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =============== PAGE HEADER =============== -->
+    <section class="hero">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Get in touch with our team</p>
+      </div>
+    </section>
+
+    <!-- =============== CONTACT SECTION =============== -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2" style="gap: 3rem; margin-bottom: 3rem;">
+          <!-- CONTACT FORM -->
+          <div>
+            <h2>Send us a Message</h2>
+            <p style="margin-bottom: 2rem;">Have a question or feedback? Fill out the form below and we'll get back to you as soon as possible.</p>
+
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="contactName">Full Name *</label>
+                <input type="text" id="contactName" name="name" required aria-label="Your name">
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail">Email Address *</label>
+                <input type="email" id="contactEmail" name="email" required aria-label="Your email">
+              </div>
+
+              <div class="form-group">
+                <label for="contactPhone">Phone Number (Optional)</label>
+                <input type="tel" id="contactPhone" name="phone" aria-label="Your phone number">
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject">Subject *</label>
+                <select id="contactSubject" name="subject" required aria-label="Select a subject">
+                  <option value="">Select a subject</option>
+                  <option value="booking">Booking Inquiry</option>
+                  <option value="general">General Question</option>
+                  <option value="support">Customer Support</option>
+                  <option value="complaint">Complaint</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Message *</label>
+                <textarea id="contactMessage" name="message" required placeholder="Please provide details about your inquiry..." aria-label="Your message"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                  <input type="checkbox" id="contactTerms" name="terms" required style="width: auto; min-width: 18px;">
+                  <span>I agree to the privacy policy and terms of service *</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            </form>
+          </div>
+
+          <!-- CONTACT INFO -->
+          <div>
+            <h2>Contact Information</h2>
+
+            <!-- Address -->
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background-color: var(--bg-light); border-radius: 8px;">
+              <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                📍 Main Office
+              </h3>
+              <p style="margin: 0;">123 Travel Street<br>New York, NY 10001<br>United States</p>
+            </div>
+
+            <!-- Phone -->
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background-color: var(--bg-light); border-radius: 8px;">
+              <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                📞 Phone
+              </h3>
+              <p style="margin: 0;">Customer Support: +1 (800) 123-4567<br>
+                 Booking Hotline: +1 (800) 234-5678<br>
+                 International: +1 (212) 555-1234</p>
+            </div>
+
+            <!-- Email -->
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background-color: var(--bg-light); border-radius: 8px;">
+              <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                ✉️ Email
+              </h3>
+              <p style="margin: 0;">General Inquiries: info@travelhub.com<br>
+                 Booking Support: booking@travelhub.com<br>
+                 Feedback: feedback@travelhub.com</p>
+            </div>
+
+            <!-- Hours -->
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background-color: var(--bg-light); border-radius: 8px;">
+              <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                ⏰ Business Hours
+              </h3>
+              <p style="margin: 0;">
+                Monday - Friday: 9:00 AM - 6:00 PM EST<br>
+                Saturday: 10:00 AM - 4:00 PM EST<br>
+                Sunday: Closed<br>
+                <br>
+                <span style="color: var(--secondary-color); font-weight: bold;">24/7 Emergency Support Available</span>
+              </p>
+            </div>
+
+            <!-- Social -->
+            <div style="padding: 1.5rem; background-color: var(--bg-light); border-radius: 8px;">
+              <h3 style="margin-bottom: 1rem;">Follow Us</h3>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook" style="width: 50px; height: 50px;">f</a>
+                <a href="#" aria-label="Twitter" style="width: 50px; height: 50px;">𝕏</a>
+                <a href="#" aria-label="Instagram" style="width: 50px; height: 50px;">📷</a>
+                <a href="#" aria-label="YouTube" style="width: 50px; height: 50px;">▶</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =============== FAQ QUICK LINKS =============== -->
+        <div style="background-color: var(--bg-light); padding: 2rem; border-radius: 8px; text-align: center;">
+          <h2>Frequently Asked Questions</h2>
+          <p>Before contacting us, check out our FAQ page for quick answers to common questions.</p>
+          <button class="btn btn-primary" onclick="window.location.href='faq.html'">Visit FAQ</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== RESPONSE TIME =============== -->
+    <section class="section" style="background-color: var(--bg-light);">
+      <div class="container">
+        <h2 class="text-center mb-2">We Respond Quickly</h2>
+        <div class="grid grid-3">
+          <div class="text-center">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+            <h3>Average 2-Hour Response</h3>
+            <p>Most inquiries answered within 2 hours during business hours</p>
+          </div>
+          <div class="text-center">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
+            <h3>Booking Support 24/7</h3>
+            <p>Round-the-clock support for booking emergencies and issues</p>
+          </div>
+          <div class="text-center">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🌍</div>
+            <h3>Multilingual Team</h3>
+            <p>Support available in English, Spanish, French, German, and more</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== OFFICE LOCATIONS =============== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-2">Our Global Offices</h2>
+        <div class="grid grid-3">
+          <div style="padding: 2rem; background-color: var(--bg-light); border-radius: 8px; border-left: 4px solid var(--primary-color);">
+            <h3>North America</h3>
+            <p><strong>New York, USA</strong><br>
+               📞 +1 (800) 123-4567<br>
+               📧 usa@travelhub.com</p>
+          </div>
+          <div style="padding: 2rem; background-color: var(--bg-light); border-radius: 8px; border-left: 4px solid var(--secondary-color);">
+            <h3>Europe</h3>
+            <p><strong>London, UK</strong><br>
+               📞 +44 (20) 3000-1000<br>
+               📧 europe@travelhub.com</p>
+          </div>
+          <div style="padding: 2rem; background-color: var(--bg-light); border-radius: 8px; border-left: 4px solid var(--accent-color);">
+            <h3>Asia Pacific</h3>
+            <p><strong>Singapore</strong><br>
+               📞 +65 6234-5678<br>
+               📧 apac@travelhub.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== FOOTER =============== -->
+  <footer>
+    <div class="container">
+      <div class="footer-section">
+        <h3>About TravelHub</h3>
+        <p>Your trusted companion for discovering and booking unforgettable travel experiences.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="travel-packages.html">Packages</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>📧 info@travelhub.com<br>📞 +1 (800) 123-4567</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#">f</a>
+          <a href="#">𝕏</a>
+          <a href="#">📷</a>
+          <a href="#">▶</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TravelHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
